@@ -1,0 +1,33 @@
+<template>
+    
+    <require from="bootstrap/css/bootstrap.css"></require>
+    
+    <!--we can skip this require in our html if we put the viewmodel in the globalResource-->
+    <!--<require from="elements/viewmodels/nav-bar"></require>-->
+    <!--using custom elements here-->
+    
+    <!--injecting a template in the custom element-->
+    <nav-bar router.bind="_router"><template replace-part="logo">Aurelia!</template> </nav-bar> 
+    
+    <div class="container-fluid">
+        <div class="col-xs-10">
+           <!--<compose view-model="viewmodels/events"></compase>   looks for the events view-model and loads it and loads the view with the smae name-->
+           
+           
+           <!--we can also have 2 routers with different name in a page so that we can specify which module goes to which part of the screen-->
+           <router-view name="mainContent"></router-view>
+       </div>
+       <div class="col-xs-2"> 
+            <!--<compose view-model="viewmodels/advert"></compase>-->
+            <!--when using routing we can just put the router view-->
+            <!--and the view is loaded as a container in the prent-->
+            <router-view name="sideBar"></router-view>
+        </div>
+        
+        <!--can also specify justa view which inherits parents view-model
+        <div class="col-xs-2">
+            <compose view="sponsors.html"></compase>
+        </div>-->
+    </div>
+    
+</template>

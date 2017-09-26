@@ -1,0 +1,14 @@
+<template>
+    <input type="text" value.bind="select">
+    <div repeat.for="event of events">
+        
+        <compose model.bind="event" view="view/event.html"></compose> 
+        <!--<compose model.bind="$parent" view="view/event.html"></compose> can pass the whole parent here so get all the vars in the viewmodel -->
+        <button click.trigger="logEvent($parent.events)">click the the parent of the repeat for</button>
+    </div>
+    <button click.trigger="createAndUseLazy()">LAZY</button>
+    
+    
+    <button click.trigger="goToDiscussion()">Go To Discussions</button>
+    
+</template>

@@ -1,0 +1,15 @@
+<template>
+   <h3>Discussion</h3> 
+   <br>
+    <input type="text" value.bind="discussionInput" ref="input1">
+    <button type="button" click.delegate="save()">Save</button>
+    <h3>Ref can be used to name an element and that element can be used for the binding of another element</h3>
+    <h5>${input1.value}</h5>
+    
+    <br>
+    <br>
+    <br>
+    <h4> Binding Behaviours</h4>
+    <input type="text" value.bind="triggerText & updateTrigger : 'blur'">
+    <h6> wait till the user has finished entering then display:  ${triggerText}</h6>
+</template>

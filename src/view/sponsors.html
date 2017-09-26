@@ -1,0 +1,12 @@
+<template>
+    Sponsors
+    when using trigger each trigger == 1 event handler 
+    <button type='button' click.trigger="doSomething()"> Click me trigger</button> 
+    <button type='button' click.delegate="doSomething2()"> Click me delegate</button> 
+    <br>
+    <br>
+    <br>
+    <h5>dialog title: ${event.title}</h5>
+    <button type='button' click.delegate="showDialog(event)"> Click me to show dialog</button>
+    
+</template>

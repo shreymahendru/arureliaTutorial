@@ -1,0 +1,10 @@
+<template>
+    <div class="row">
+        <h1>${event.id}</h1>
+        <h3>${event.greeting}</h3> 
+        <!--2 way binding is beautiful -->
+        <div class="column-md-12" textContent.two-way="event.about" contenteditable="true"></div>
+        
+    </div>
+    <h1>other binding = one-way, two-way and one-time</h1>
+</template>

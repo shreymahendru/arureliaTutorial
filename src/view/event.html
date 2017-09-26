@@ -1,0 +1,11 @@
+<template>
+    <require from="attributes/tagAttribute"></require> 
+    <div class="bg-success rbox" tag-background="tags-array.bind: event.tags; highlight-tag.bind : select">
+        <!--this is a very dirty way to do it as you don't want static routes in your html, we can generate routes dynamically, which is really cool-->
+        <!--<a href="#/event/${event.id}">
+             ${event.id} : ${event.about}     
+        </a>-->
+        <!--this detail url is defined in the events module itself-->
+        <a  href.bind="event.detailUrl"> ${event.id} : ${event.about}</a>
+       </div>
+</template>
